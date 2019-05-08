@@ -1,0 +1,92 @@
+body {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  margin-top: 0;
+  padding-top: 0;
+  height: 1000px;
+}
+
+p {
+  margin: 0px;
+}
+
+#header-Name {
+display: grid;
+
+grid-template-columns: auto auto auto 70%;
+grid-template-rows: 7vh;
+
+grid-template-areas:
+"name home dashboard .";
+
+background-color: #ffc0cb;
+text-decoration: none;
+margin-bottom: 2%;
+
+}
+
+#header-Name a {
+  text-decoration: none;
+  font-family: Shrikhand;
+  color: black;
+}
+
+#header-MyName {
+  grid-area: name;
+
+}
+
+#header-Home {
+  grid-area: home;
+}
+
+#header-Dashboard {
+  grid-area: dashboard;
+}
+
+/*-------HEADER ENDS HERE--------*/
+
+#main {
+  width: 85%;
+  height: 100vh;
+  margin: auto;
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+
+  grid-template-areas:
+  "greeting greeting . calendar calendar calendar"
+  "greeting greeting . calendar calendar calendar"
+  ". . . calendar calendar calendar"
+  ". . . calendar calendar calendar";
+}
+
+#greeting {
+  grid-area: greeting;
+  background-color: green;
+  margin-top: 0px;
+}
+
+#calendar {
+  grid-area: calendar;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+
+}
+
+#calendar-TimeDate p {
+  font-family: arial;
+  font-size: 2.5vw;
+  text-align: center;
+  margin-top: 2%;
+}
+
+#calendar-Days {
+  display: grid;
+
+  grid-template-rows: ;
+  grid-template-columns: ;
+}
