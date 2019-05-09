@@ -5,10 +5,15 @@ body {
   margin-top: 0;
   padding-top: 0;
   height: 1000px;
+  background-color: #bfd8d1;
 }
 
 p {
   margin: 0px;
+}
+
+#container-0 {
+  height: 1000px;
 }
 
 #header-Name {
@@ -18,23 +23,43 @@ grid-template-columns: auto auto auto 70%;
 grid-template-rows: 7vh;
 
 grid-template-areas:
-"name home dashboard .";
-
-background-color: #ffc0cb;
+"home name dashboard .";
+display: flex;
+justify-content: center;
+background-color: #ee8080;
 text-decoration: none;
 margin-bottom: 2%;
 
+}
+
+#header-Name div {
+  margin: 0px 2% 0px 2%;
 }
 
 #header-Name a {
   text-decoration: none;
   font-family: Shrikhand;
   color: black;
+  font-size: 120%;
 }
 
 #header-MyName {
-  grid-area: name;
+  font-size: 160%;
+}
 
+#profile-Cont {
+  display: block;;
+  height: 10%;
+  width: 10%;
+}
+
+
+#header-MyName {
+  grid-area: name;
+}
+
+#myName a:hover #profile-Cont{
+display: block;
 }
 
 #header-Home {
@@ -49,89 +74,71 @@ margin-bottom: 2%;
 
 #main {
   width: 85%;
-  height: 100vh;
+  height: 100%;
   margin: auto;
   display: grid;
+  background-color: #bfd8d1;
 
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 20% 20% 20% 20% 20%;
+  grid-template-columns: repeat(6, 16.66%);
+  grid-template-rows: repeat(5, 22%);
 
   grid-template-areas:
-  "greeting greeting . calendar calendar calendar"
-  "greeting greeting . calendar calendar calendar"
+  "greeting greeting greeting calendar calendar calendar"
   ". . . calendar calendar calendar"
-  ". . . calendar calendar calendar";
+  ". . . . . ."
+  ". . . . . .";
 }
 
 #greeting {
   grid-area: greeting;
-  background-color: green;
+  background-color: #178a94;
   margin-top: 0px;
+  border-radius: 3%;
+  padding: 4%;
+  margin-right: 2%;
+}
+
+#greeting p {
+  font-family: Merriweather;
+  font-size: 15px;
 }
 
 #calendar {
   grid-area: calendar;
-  border: 2px solid black;
   display: flex;
   flex-direction: column;
+  border: solid 2px black;
+  overflow: hidden;
+}
+
+#calendar-May {
+  font-size: 4vw;
+  align-self: center;
+  margin-bottom: 1%;
 
 }
 
-#calendar-TimeDate p {
-  font-family: arial;
-  font-size: 2.5vw;
-  text-align: center;
-  margin-top: 2%;
-  height: 20%;
+#calendar-May p {
+  font-family: Merriweather;
+
 }
 
 #calendar-Days {
-  display: grid;
+display: grid;
+grid-gap: 5px;
+grid-template-rows: repeat(5, 50%);
+grid-template-columns: repeat(7, 14%);
+grid-auto-flow: row;
+padding: 0px 4% 4% 4%;
+font-family: Merriweather;
 
-  height: 80%;
-
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-
-  grid-template-areas:
-
-  "day . . . . . .";
-
-
-  /* grid-template-areas:
-  "row1"
-  "row2"
-  "row3"
-  "row4"
-  "row5"; */
 }
 
-#day1 {
-  grid-area: day;
-  border: 1px solid black;
+.day {
+  border: solid 1px black;
+  padding-left: 3%;
 }
 
-/* #row-1 {
-  grid-area: row1;
-  border: 1px solid black;
+.day-Grey {
+  border: solid 1px black;
 }
-
-#row-2 {
-  grid-area: row2;
-  border: 1px solid black;
-}
-
-#row-3 {
-  grid-area: row3;
-  border: 1px solid black;
-}
-
-#row-4 {
-  grid-area: row4;
-  border: 1px solid black;
-}
-
-#row-5 {
-  grid-area: row5;
-  border: 1px solid black;
-} */
