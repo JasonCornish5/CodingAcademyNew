@@ -82,11 +82,56 @@ margin-bottom: 2%;
   font-size: 2.5vw;
   text-align: center;
   margin-top: 2%;
+  height: 20%;
 }
 
 #calendar-Days {
   display: grid;
 
-  grid-template-rows: ;
-  grid-template-columns: ;
+  height: 80%;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+  grid-template-areas:
+
+  "day . . . . . .";
+
+
+  /* grid-template-areas:
+  "row1"
+  "row2"
+  "row3"
+  "row4"
+  "row5"; */
 }
+
+#day1 {
+  grid-area: day;
+  border: 1px solid black;
+}
+
+/* #row-1 {
+  grid-area: row1;
+  border: 1px solid black;
+}
+
+#row-2 {
+  grid-area: row2;
+  border: 1px solid black;
+}
+
+#row-3 {
+  grid-area: row3;
+  border: 1px solid black;
+}
+
+#row-4 {
+  grid-area: row4;
+  border: 1px solid black;
+}
+
+#row-5 {
+  grid-area: row5;
+  border: 1px solid black;
+} */
